@@ -1,6 +1,10 @@
-opencv-python==4.5.3.56
-numpy==1.21.2
-torch==1.9.1
-pandas==1.3.3
-torchvision==0.10.1
+opencv-python
+numpy
+torch
+pandas
+torchvision
+tqdm
+scikit-learn
+seaborn
+matplotlib
 git+https://github.com/ndrplz/ConvLSTM_pytorch.git
