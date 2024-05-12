@@ -2,7 +2,7 @@
 
 ## Description
 
-This project aims to detect violence in video sequences using deep learning. We use a modified Densenet121 model, with added ConvLSTM2D layers, to process video frames and predict whether violence is present. Additionally, optical flow was used for temporal feature extraction.
+This project is focused on identifying instances of violence in video sequences through the use of deep learning. Drawing inspiration from [ViolenceNet](https://github.com/FernandoJRS/violence-detection-deeplearning), we have employed a customized & adapted version of the Densenet121 model, enhanced with convLSTM cells, to analyze video frames and make predictions about the presence of violence. To capture temporal information, optical flow was utilized as the model's input. Contrary to the approach used in the original paper that inspired us, we implemented frame skipping on the optical flow due to memory and computation constraints. Additionally, we used a minimized version of densenet (i.e., less channels/neurons) due to the same constraints.
 
 ## Technologies Used
 
@@ -38,9 +38,25 @@ To use the violence detection model, run the cells in the `app.ipynb` Jupyter No
 
 **Please read comments and markdown cells before running a cell.**
 
+## Dataset
+
+The dataset used for this project can be found on Kaggle: [Hockey Fights](https://www.kaggle.com/datasets/yassershrief/hockey-fight-vidoes/data)
+
+## Results
+
+In our experiments, the adapted Densenet121 model demonstrated promising results in detecting violence in video sequences. The model achieved an accuracy of 55%, a weighted precision of 76%, a weighted recall of 55%, and a weighted F-score of 41%. These metrics indicate that the model overfitted.
+
+The performance of the model is further illustrated in the images below, which show the final confusion matrix, a plot of the training accuracy over epochs, and a plot of the training loss over epochs, respectively.
+
+![Confusion Matrix](./images/confusion_matrix.png)
+
+![Training Accuracy Over Epochs](./images/training_accuracy.png)
+
+![Training Loss Over Epochs](./images/training_loss.png)
+
 ## Credits
 
-This project was developed for Computer Vision Course by Ahmed, Mohammed, Saeed, Yousef
+This project was developed as the course project for the Computer Vision course at American University of Sharjah by [Ahmed](https://github.com/akvnn), [Mohammed](https://github.com/m7mdhussamaus), [Said](https://github.com/Said-Iqelan), [Youssef](https://github.com/y-ghoneim)
 
 ## License
 
