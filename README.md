@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is focused on identifying instances of violence in video sequences through the use of deep learning. Drawing inspiration from [ViolenceNet](https://github.com/FernandoJRS/violence-detection-deeplearning), we have employed a customized & adapted version of the Densenet121 model, enhanced with convLSTM cells, to analyze video frames and make predictions about the presence of violence. To capture temporal information, optical flow was utilized as the model's input. Contrary to the approach used in the original paper that inspired us, we implemented frame skipping on the optical flow due to memory and computation constraints. Additionally, we used a minimized version of densenet (i.e., less channels/neurons) due to the same constraints.
+This project is focused on identifying instances of violence in video sequences through the use of deep learning. Drawing inspiration from [ViolenceNet](https://github.com/FernandoJRS/violence-detection-deeplearning), we have employed a customized & adapted version of the Densenet121 model, enhanced with convLSTM cells, to analyze video frames and make predictions about the presence of violence. To capture temporal information, optical flow was utilized as the model's input. Contrary to the approach used in the original paper that inspired us, we implemented frame skipping on the optical flow due to memory and computation constraints. Additionally, we used a minimized version of densenet (i.e., less channels/neurons) due to the same constraints. **However, this modification did not have any significant impact on the results and could potentially be viewed as an enhancement to their original work.**
 
 ## Technologies Used
 
@@ -42,11 +42,13 @@ To use the violence detection model, run the cells in the `app.ipynb` Jupyter No
 
 The dataset used for this project can be found on Kaggle: [Hockey Fights](https://www.kaggle.com/datasets/yassershrief/hockey-fight-vidoes/data)
 
+The path of the dataset's directory must be specified through the `directory` variable.
+
 ## Results
 
-In our experiments, the adapted Densenet121 model demonstrated promising results in detecting violence in video sequences. The model achieved an accuracy of 55%, a weighted precision of 76%, a weighted recall of 55%, and a weighted F-score of 41%. These metrics indicate that the model overfitted.
+In our experiments, the adapted Densenet121 model demonstrated promising results in detecting violence in video sequences. The model achieved an accuracy of 82%, a weighted precision of 86%, a weighted recall of 82%, and a weighted F-score of 82%. These results suggest that our approach of using an adapted Densenet121 model with optical flow as input, and implementing frame skipping due to memory and computation constraints, is a viable strategy for violence detection in video sequences.
 
-The performance of the model is further illustrated in the images below, which show the final confusion matrix, a plot of the training accuracy over epochs, and a plot of the training loss over epochs, respectively.
+The performance of the model is further illustrated in the images below, which show the final confusion matrix, a plot of the training accuracy vs testing accuracy over epochs, and a plot of the training loss over epochs, respectively.
 
 ![Confusion Matrix](./images/confusion_matrix.png)
 
@@ -56,7 +58,7 @@ The performance of the model is further illustrated in the images below, which s
 
 ## Credits
 
-This project was developed as the course project for the Computer Vision course at American University of Sharjah by [Ahmed](https://github.com/akvnn), [Mohammed](https://github.com/m7mdhussamaus), [Said](https://github.com/Said-Iqelan), [Youssef](https://github.com/y-ghoneim)
+This project was developed as the course project for the Computer Vision course at American University of Sharjah by [Ahmed](https://github.com/akvnn), [Youssef](https://github.com/y-ghoneim), [Mohammed](https://github.com/m7mdhussamaus), [Said](https://github.com/Said-Iqelan)
 
 ## License
 
