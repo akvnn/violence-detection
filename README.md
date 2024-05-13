@@ -46,7 +46,7 @@ The path of the dataset's directory must be specified through the `directory` va
 
 ## Results
 
-In our experiments, the adapted Densenet121 model demonstrated promising results in detecting violence in video sequences. The model achieved an accuracy of 82%, a weighted precision of 86%, a weighted recall of 82%, and a weighted F-score of 82%. These results suggest that our approach of using an adapted Densenet121 model with optical flow as input, and implementing frame skipping due to memory and computation constraints, is a viable strategy for violence detection in video sequences.
+In our experiments, the adapted Densenet121 model demonstrated promising results in detecting violence in video sequences. The model achieved an accuracy of 86%, a weighted precision of 86%, a weighted recall of 86%, and a weighted F-score of 86%. These results suggest that our approach of using an adapted Densenet121 model with optical flow as input, and implementing frame skipping due to memory and computation constraints, is a viable strategy for violence detection in video sequences.
 
 The performance of the model is further illustrated in the images below, which show the final confusion matrix, a plot of the training accuracy vs testing accuracy over epochs, and a plot of the training loss over epochs, respectively.
 
