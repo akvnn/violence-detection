@@ -4,6 +4,8 @@
 
 This project is focused on identifying instances of violence in video sequences through the use of deep learning. Drawing inspiration from [ViolenceNet](https://github.com/FernandoJRS/violence-detection-deeplearning), we have employed a customized & adapted version of the Densenet121 model, enhanced with convLSTM cells, to analyze video frames and make predictions about the presence of violence. To capture temporal information, optical flow was utilized as the model's input. Contrary to the approach used in the original paper that inspired us, we implemented frame skipping on the optical flow due to memory and computation constraints. Additionally, we used a minimized version of densenet (i.e., less channels/neurons) due to the same constraints. **However, this modification did not have any significant impact on the results and could potentially be viewed as an enhancement to their original work.**
 
+**Video** : [Click Here](https://drive.google.com/file/d/1Y1Lh7DA4MJ_hhOEwse9Hs90nWKo11zvK/view?usp=sharing)
+
 ## Technologies Used
 
 This project is implemented using Python and the following libraries:
